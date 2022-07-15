@@ -1,0 +1,155 @@
+.order {
+  flex: 4;
+  padding: 20px;
+}
+
+.orderTitleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.orderTopSection {
+  display: flex;
+}
+
+.orderTopSection {
+  display: flex;
+  flex: 1;
+}
+
+.orderInfo,
+.orderState {
+  flex: 1;
+  padding: 20px;
+  margin: 20px;
+}
+
+.orderInfo:last-child,
+.orderState {
+  -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+}
+
+.orderInfoTitle {
+  margin-bottom: 10px;
+}
+
+.orderInfoItem {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.orderInfoValue {
+  font-weight: 300;
+}
+
+.orderItemsSummary {
+  flex: 3;
+}
+
+.bottomSection {
+  display: flex;
+}
+
+table,
+th,
+td {
+  border: 1px solid gray;
+  border-collapse: collapse;
+}
+
+.tableImage {
+  width: 100px;
+  height: 100px;
+}
+
+.thName {
+  width: 200px;
+}
+
+.thAmount {
+  width: 90px;
+}
+
+.thPrice {
+  width: 120px;
+}
+
+.tdAmount {
+  text-align: center;
+}
+
+.tdPrice {
+  text-align: right;
+}
+
+.orderStateContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+}
+
+.orderStateTitle {
+  margin-bottom: 10px;
+}
+
+input {
+  margin-right: 10px;
+}
+
+.labelStatus {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 20px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  color: white;
+  margin-right: 20px;
+}
+
+.pending {
+  background-color: cadetblue;
+}
+
+.delivered {
+  background-color: darkgreen;
+}
+
+.paid {
+  background-color: orange;
+}
+
+.canceled {
+  background-color: crimson;
+}
+
+.buttonUpdateContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  margin-top: 10px;
+  padding: 7px 10px;
+  width: 200px;
+  height: 35px;
+  border: none;
+  border-radius: 10px;
+  background-color: darkgreen;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-disabled {
+  pointer-events: none;
+  background: grey;
+}

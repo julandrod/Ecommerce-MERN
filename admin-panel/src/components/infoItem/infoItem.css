@@ -1,0 +1,10 @@
+.infoItem {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.infoValue {
+  font-weight: 300;
+}
