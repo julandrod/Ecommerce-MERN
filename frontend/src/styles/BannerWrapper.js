@@ -7,6 +7,10 @@ const Wrapper = styled.div`
   position: relative;
   overflow: hidden;
 
+  @media (max-width: 768px) {
+    display: none;
+  }
+
   .arrow {
     width: 50px;
     height: 50px;
