@@ -28,9 +28,11 @@ const Wrapper = styled.div`
     align-items: center;
     width: 60%;
     border: 1px solid gray;
+    min-width: 200px;
   }
 
   .order-item-summary {
+    flex-direction: column;
     img {
       width: 100px;
       height: 100px;
@@ -54,6 +56,11 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     margin: 1rem 0;
+  }
+  @media (min-width: 768px){
+    .order-item-summary{
+      flex-direction: row;
+    }
   }
 `;
 

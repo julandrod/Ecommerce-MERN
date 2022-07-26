@@ -5,7 +5,7 @@ const Wrapper = styled.div`
   border: 0.5px solid var(--grey-700);
   border-radius: 10px;
   padding: 1rem;
-  height: 50vh;
+  height: 80vh;
   .summary-item {
     margin: 30px 0;
     display: flex;
@@ -18,6 +18,10 @@ const Wrapper = styled.div`
     width: 100%;
     text-decoration: none;
     text-align: center;
+  }
+  
+  @media (min-width: 1200px) {
+    height: 50vh;
   }
 `;
 

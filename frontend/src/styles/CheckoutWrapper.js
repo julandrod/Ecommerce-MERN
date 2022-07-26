@@ -2,12 +2,15 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   padding: 1rem 4rem;
+  display: flex;
+  flex-direction: column;
   h1 {
     text-align: center;
     margin-bottom: 3rem;
   }
   .middle {
     display: flex;
+    flex-direction: column;
   }
   .subtitle {
     margin-bottom: 2rem;
@@ -15,21 +18,17 @@ const Wrapper = styled.div`
   .fullname {
     text-transform: capitalize;
   }
-  .left {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    height: 50vh;
-  }
+  .left,
   .right {
     flex: 1;
     display: flex;
     flex-direction: column;
+    padding: 1rem;
+    height: 70vh;
+  }
+  .right {
     border: 0.5px solid var(--grey-700);
     border-radius: 10px;
-    padding: 1rem;
-    height: 50vh;
   }
   .info-item {
     display: flex;
@@ -53,6 +52,17 @@ const Wrapper = styled.div`
     padding: 3rem 0;
     a {
       margin: 0 2rem;
+    }
+  }
+  @media (min-width: 768px) {
+    .middle {
+      flex-direction: row;
+    }
+  }
+  @media (min-width: 992px) {
+    .left,
+    .right {
+      height: 60vh;
     }
   }
 `;

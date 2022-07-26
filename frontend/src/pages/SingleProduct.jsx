@@ -21,7 +21,6 @@ const SingleProduct = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
 
-  console.log(size);
   useEffect(() => {
     dispatch(getSingleProduct(id));
   }, [dispatch, id]);

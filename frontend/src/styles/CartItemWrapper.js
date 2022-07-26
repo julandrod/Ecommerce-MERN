@@ -4,15 +4,16 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   .product-detail {
-    flex: 2;
+    flex: 1;
     display: flex;
+    flex-direction: column;
     img {
       width: 200px;
       height: 200px;
     }
   }
   .details {
-    padding: 1rem;
+    /* padding: 1rem; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -68,6 +69,14 @@ const Wrapper = styled.div`
       font-size: 28px;
       color: var(--red-dark);
       cursor: pointer;
+    }
+  }
+  @media (min-width: 768px){
+    .product-detail{
+      flex-direction: row;
+    }
+    .details{
+      padding: 1rem;
     }
   }
 `;

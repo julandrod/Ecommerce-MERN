@@ -2,11 +2,7 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import Wrapper from "../styles/NavbarWrapper";
 import Logo from "./Logo";
-import {
-  ShoppingCartOutlined,
-  PersonOutlineOutlined,
-  ExitToAppOutlined,
-} from "@material-ui/icons";
+import { MenuRounded } from "@material-ui/icons";
 import { useDispatch, useSelector } from "react-redux";
 import {
   logoutUser,
@@ -19,6 +15,8 @@ import {
   selectCartState,
   showCartModal,
 } from "../features/cartSlice";
+import CartButtons from "./CartButtons";
+import { sidebarOpen } from "../features/filtersSlice";
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -44,9 +42,11 @@ const Navbar = () => {
         <Link to="/" className="link">
           <Logo className="logo" />
         </Link>
+        <button className="nav-toggle" onClick={() => dispatch(sidebarOpen())}>
+          <MenuRounded />
+        </button>
       </div>
-      <div className="items-container">
-        <ul>
+        <ul className="items-container">
           <NavLink
             to="/products/mujer"
             className={({ isActive }) =>
@@ -72,33 +72,8 @@ const Navbar = () => {
             <li>Todos</li>
           </NavLink>
         </ul>
-      </div>
-      <div className="login-cart-container">
-        <Link to="/cart" className="cart-btn">
-          <span className="cart-container">
-            <ShoppingCartOutlined />
-            <span className="cart-value">{totalItems}</span>
-          </span>
-        </Link>
-        {cartModal && (
-          <div className="dropdown">
-            <span>Se agrego un item al carrito</span>
-          </div>
-        )}
-        {userId ? (
-          <button
-            className="logout-btn"
-            type="button"
-            onClick={() => dispatch(logoutUser())}
-          >
-            <ExitToAppOutlined />
-          </button>
-        ) : (
-          <Link to="/login" className="login-btn">
-            <PersonOutlineOutlined />
-          </Link>
-        )}
-      </div>
+      <CartButtons />
+      
     </Wrapper>
   );
 };

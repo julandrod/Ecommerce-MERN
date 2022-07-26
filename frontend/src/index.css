@@ -69,6 +69,10 @@ li {
   padding-bottom: 10px;
 }
 
+a{
+  text-decoration: none;
+}
+
 .router-link{
   color: inherit;
   text-decoration: none;

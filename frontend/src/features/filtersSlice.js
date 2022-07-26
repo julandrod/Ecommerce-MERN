@@ -6,6 +6,7 @@ const initialState = {
   size: "",
   sort: "",
   search: "",
+  isSidebarOpen: false,
 };
 
 const filtersSlice = createSlice({
@@ -25,10 +26,17 @@ const filtersSlice = createSlice({
       state.sort = "";
       state.search = "";
     },
+    sidebarOpen: (state) => {
+      state.isSidebarOpen = true;
+    },
+    sidebarClose: (state) => {
+      state.isSidebarOpen = false;
+    },
   },
 });
 
-export const { updateFilters, clearFilters } = filtersSlice.actions;
+export const { updateFilters, clearFilters, sidebarOpen, sidebarClose } =
+  filtersSlice.actions;
 
 export const selectFilterState = (state) => state.filters;
 

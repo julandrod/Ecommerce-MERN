@@ -1,22 +1,19 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  flex: 1 0 400px;
+  flex: 1 0 300px;
   margin: 1rem 0.25em;
   padding: 10px;
   height: 50vh;
   position: relative;
-
   &:hover {
     transform: scale(1.1);
   }
-
   img {
     height: 100%;
     width: 100%;
     object-fit: cover;
   }
-
   .info {
     position: absolute;
     top: 0;
@@ -31,6 +28,9 @@ const Wrapper = styled.div`
     h1 {
       margin-bottom: 10px;
     }
+  }
+  @media (min-width: 768px) {
+    flex: 1 0 400px;
   }
 `;
 

@@ -1,5 +1,6 @@
 import Alert from "./Alert";
 import Banner from "./Banner";
+import CartButtons from "./CartButtons";
 import CartItem from "./CartItem";
 import CartSummary from "./CartSummary";
 import Categories from "./Categories";
@@ -12,10 +13,12 @@ import Logo from "./Logo";
 import Navbar from "./Navbar";
 import ProductItem from "./ProductItem";
 import SelectOptionItem from "./SelectOptionItem";
+import Sidebar from "./Sidebar";
 
 export {
   Alert,
   Banner,
+  CartButtons,
   CartItem,
   CartSummary,
   Categories,
@@ -28,4 +31,5 @@ export {
   Navbar,
   ProductItem,
   SelectOptionItem,
+  Sidebar
 };
